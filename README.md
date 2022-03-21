@@ -1,4 +1,4 @@
-# scRNA-seq and scATAC-seq Data Analysis Baseline Model
+# Multi-seq Data Analysis Baseline Model
 ## Overview
 
 Baseline model for [the Dream Challenge]: [scImpute](https://github.com/Vivianstats/scImpute)
