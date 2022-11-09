@@ -11,6 +11,6 @@ COPY write_count.R /write_count.R
 COPY scimpute.R /scimpute.R
 COPY modified_scimpute_funs.R /modified_scimpute_funs.R
 
-CMD ["Rscript", "/build_baseline.R", "/input", "/output"]
+ENTRYPOINT ["Rscript", "/build_baseline.R", "/input", "/output"]
 
 
