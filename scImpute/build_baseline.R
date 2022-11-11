@@ -19,10 +19,7 @@ filenames <- tools::file_path_sans_ext(input_filenames)
 # Add "_imputed" to create prediction/output filenames
 output_filenames <- paste0(filenames, "_imputed.csv")
 
-t0 <- Sys.time()
-
 for (i in seq_along(input_filenames)) {
-    cat(">>>>>>>>>>Imputing ", input_filenames[i], "\n")
     scimpute(file.path(input_dir, input_filenames[i]),
         # ensure to have a '/' at last, otherwise scImpute will fail since it uses paste0
         out_dir = file.path(out_dir, ""),
