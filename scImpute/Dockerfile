@@ -3,7 +3,6 @@ FROM satijalab/seurat:4.0.3
 
 RUN R -e "install.packages(c('remotes'), repos = 'http://cran.us.r-project.org')"
 RUN R -e "remotes::install_github('Vivianstats/scImpute')"
-RUN apt-get update && apt-get install -y pigz
 
 COPY build_baseline.R /build_baseline.R
 COPY read_count.R /read_count.R
