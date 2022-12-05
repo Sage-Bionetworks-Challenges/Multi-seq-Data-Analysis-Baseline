@@ -28,8 +28,3 @@ for (i in seq_along(input_filenames)) {
         ncores = ncores
     )
 }
-
-system(sprintf("tar -I pigz -cvf %s/predictions.tar.gz %s/*_imputed.csv", out_dir, out_dir))
-
-# Quick getting results from scimpute - for admin purpose
-# system("cp /input/scimpute.tar.gz /output/predictions.tar.gz")

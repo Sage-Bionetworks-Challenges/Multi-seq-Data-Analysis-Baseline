@@ -10,5 +10,3 @@ basename -a -s .bam $(ls $INPUT_DIR/*.bam) | parallel --max-procs=$NCORES --halt
    perl /01.filter_peaks.pl $OUPUT_DIR/{}_peaks.narrowPeak $OUPUT_DIR/{} 500 &&
    mv $OUPUT_DIR/{}.500.bed $OUPUT_DIR/{}.bed &&
    rm -f $OUPUT_DIR/{}_summits.bed'
-
-tar -I pigz -cvf $OUPUT_DIR/predictions.tar.gz $OUPUT_DIR/*.bed
